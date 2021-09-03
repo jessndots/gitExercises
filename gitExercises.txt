@@ -1,0 +1,54 @@
+jdots@DESKTOP-NE88CME:~$ mkdir learn_git_again
+jdots@DESKTOP-NE88CME:~$ cd learn_git_again
+jdots@DESKTOP-NE88CME:~/learn_git_again$ touch third.txt
+jdots@DESKTOP-NE88CME:~/learn_git_again$ git init
+Initialized empty Git repository in /home/jdots/learn_git_again/.git/
+jdots@DESKTOP-NE88CME:~/learn_git_again$ git add third.txt
+jdots@DESKTOP-NE88CME:~/learn_git_again$ git commit -m "adding third.txt"
+[master (root-commit) 0c1c3f3] adding third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+jdots@DESKTOP-NE88CME:~/learn_git_again$ git log
+commit 0c1c3f3d0b133742381c6d480c83eae82eebe8e7 (HEAD -> master)
+Author: Jessica Doty <jessndoty@gmail.com>
+Date:   Fri Sep 3 11:08:36 2021 -0700
+
+    adding third.txt
+jdots@DESKTOP-NE88CME:~/learn_git_again$ touch fourth.txt
+jdots@DESKTOP-NE88CME:~/learn_git_again$ git add fourth.txt
+jdots@DESKTOP-NE88CME:~/learn_git_again$ git commit -m "adding fourth.txt"
+[master 7f35c32] adding fourth.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+jdots@DESKTOP-NE88CME:~/learn_git_again$ rm third.txt
+jdots@DESKTOP-NE88CME:~/learn_git_again$ git add third.txt
+jdots@DESKTOP-NE88CME:~/learn_git_again$ git commit -m "removing third.txt"
+[master a581a22] removing third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+jdots@DESKTOP-NE88CME:~/learn_git_again$ git log
+commit a581a22adf3307cca1cff033b88d4eeab95b1a6d (HEAD -> master)
+Author: Jessica Doty <jessndoty@gmail.com>
+Date:   Fri Sep 3 11:11:22 2021 -0700
+
+    removing third.txt
+
+commit 7f35c325f0d5a8c209886cc7865931e9bc9d55fe
+Author: Jessica Doty <jessndoty@gmail.com>
+Date:   Fri Sep 3 11:10:07 2021 -0700
+
+    adding fourth.txt
+
+commit 0c1c3f3d0b133742381c6d480c83eae82eebe8e7
+Author: Jessica Doty <jessndoty@gmail.com>
+Date:   Fri Sep 3 11:08:36 2021 -0700
+
+    adding third.txt
+
+jdots@DESKTOP-NE88CME:~/learn_git_again$ git config --global core.pager 'cat'
+jdots@DESKTOP-NE88CME:~/learn_git_again$ man git config
+jdots@DESKTOP-NE88CME:~/learn_git_again$ git config --global -l
+user.email=jessndoty@gmail.com
+user.name=Jessica Doty
+core.pager=cat
+jdots@DESKTOP-NE88CME:~/learn_git_again$
